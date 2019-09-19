@@ -30,7 +30,7 @@ output.SetPoints(pts)
 # Now read element(cell) info
 numCells = int(words[words.index('$ELEMENTS')+1])
 #print (numCells)
-output.Allocate(numCells, 1000)
+output.Allocate(numCells, 100000)
 pos2 = words.index('$ELEMENTS')+2
 celltype = words[pos2+2] 
  
@@ -58,7 +58,7 @@ def findCellType(celltype):
   else:
     ctype = 0
     numCellPoints = 0
-    print "Failed to identify element type"
+    print ("Failed to identify element type")
     
   return ctype, numCellPoints
 # function ends here
